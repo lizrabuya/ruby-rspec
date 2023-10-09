@@ -1,8 +1,8 @@
-FROM ruby:2.7-alpine
+FROM ruby:3.2
 
 WORKDIR /app
 
-ADD Gemfile Gemfile.lock /app/
+COPY app /app
 RUN bundle install -j 8
 
 ADD . /app
