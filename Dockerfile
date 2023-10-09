@@ -1,8 +1,7 @@
-FROM ruby:2.7-alpine
-
-
+FROM ruby:3.2
+ 
 WORKDIR /app
+COPY app/Gemfile* ./
+RUN bundle install
 
 COPY app /app
-RUN bundle install -j 8
-ADD . /app 
