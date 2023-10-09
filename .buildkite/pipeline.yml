@@ -1,6 +1,7 @@
 steps:
   - name: ":rspec:"
-    command: gem install rspec && ls -a
+    command: gem install rspec && ls -al && pwd && echo "hello there!"
     plugins:
       - docker#v5.7.0:
           image: ruby:3.2 
+          workdir: /app
