@@ -8,5 +8,6 @@ steps:
         image: ruby:3.2
         workdir: /app
         expand-volume-vars: true
+        mount-checkout: false
         volumes:
           - "$$PWD/app:/app"
