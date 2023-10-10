@@ -8,4 +8,4 @@ steps:
         workdir: /app
         mount-checkout: false
         volumes:
-          - ./app:/app
+          - app:/app
