@@ -1,11 +1,12 @@
 steps:
   - name: ":rspec:"
-    command: gem install rspec && ls -al
+    command: gem install rspec && rspec --color spec
     plugins:
       - docker#v5.9.0:
           image: ruby:3.2  
-  - label: ":hammer: Testing"
-    command: gem install rubocop && ls -al
+  - label: ":hammer: workdir check"
+    command: ls -al
     plugins:
-      - docker#v5.7.0:
-          image: ruby:3.2           
+      - docker#v5.9.0:
+          image: ruby:3.2
+          workdir: /workdir/app           
