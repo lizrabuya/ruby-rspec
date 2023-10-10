@@ -3,5 +3,9 @@ steps:
     command: gem install rspec && ls -al
     plugins:
       - docker#v5.9.0:
-          image: ruby:3.2 
-          mount-checkout: true
+          image: ruby:3.2  
+  - label: ":hammer: Testing"
+    command: gem install rubocop && ls -al
+    plugins:
+      - docker#v5.7.0:
+          image: ruby:3.2           
