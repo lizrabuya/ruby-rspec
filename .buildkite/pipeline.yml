@@ -5,8 +5,7 @@ steps:
       - docker#v5.9.0:
           image: ruby:3.2  
   - label: ":hammer: workdir check"
-    command: ls -al
+    command: ls -al && rspec
     plugins:
       - docker#v5.9.0:
-          image: ruby:3.2
-          workdir: /workdir/app           
+          image: meltwater/rspec:3.8        
