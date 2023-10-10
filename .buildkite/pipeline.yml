@@ -1,9 +1,9 @@
 steps:
   - name: ":rspec:"
     #command: gem install rspec && bundle exec rspec --color specs
-    command: pwd && ls -al
+    command: pwd && ls -al /app
     plugins:
      - docker#v5.9.0:
         image: ruby:3.2
-        # workdir: /app
+        workdir: /app
         # mount-checkout: false
