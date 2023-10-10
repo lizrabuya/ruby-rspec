@@ -6,8 +6,4 @@ steps:
     plugins:
      - docker#v5.9.0:
         image: ruby:3.2
-        workdir: /app
-        expand-volume-vars: true
-        mount-checkout: false
-        volumes:
-          - "$$PWD/app:/app"
+        always-pull: true
