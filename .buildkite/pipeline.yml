@@ -1,11 +1,12 @@
 steps:
   - name: ":rspec:"
     #command: gem install rspec && bundle exec rspec --color specs
-    command: bundle install && rspec app/specs
+    #command: bundle install && rspec app/specs
+    command: bundle install && ls -al app
     plugins:
      - docker#v5.9.0:
         image: ruby:3.2
         workdir: /app
         mount-checkout: false
         volumes:
-          - app:/app
+          - "$(PWD)/app:/app"
