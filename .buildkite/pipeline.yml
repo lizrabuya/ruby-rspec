@@ -2,7 +2,7 @@ steps:
   - name: ":rspec:"
     #command: gem install rspec && bundle exec rspec --color specs
     #command: bundle install && rspec app/specs
-    command: ls -al
+    command: ls -al app
     plugins:
      - docker#v5.9.0:
         image: ruby:3.2
