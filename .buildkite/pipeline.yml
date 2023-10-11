@@ -1,3 +1,5 @@
+env:
+  FOO: bar
 steps:
   - name: ":rspec:"
     command: gem install rspec && rspec --init && rspec --color specs
@@ -9,3 +11,6 @@ steps:
     command: "buildkite-agent pipeline upload .buildkite/pipeline2.yml"
     env:
       TARGET_ENV: "staging"
+  - name: "group ${FOO}"
+    steps:
+    - commands: echo hello 
