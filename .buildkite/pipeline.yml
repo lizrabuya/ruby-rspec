@@ -9,5 +9,5 @@ steps:
   - label: ":pipeline: upload"
     command: "buildkite-agent pipeline upload .buildkite/pipeline2.yml"
     env:
-      TARGET_ENV: "staging"
+      TARGET_ENV: "PROD"
   
