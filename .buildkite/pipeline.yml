@@ -4,7 +4,7 @@ steps:
     command: 
       - bundle config set --local with 'test'
       - cd app && bundle install
-      - gem install rspec && rspec --color spec
+      - rspec --color spec
     plugins:
       - docker#v5.9.0:
           image: ruby:3.2
