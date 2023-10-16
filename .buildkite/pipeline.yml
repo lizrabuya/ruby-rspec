@@ -3,7 +3,7 @@ steps:
   - label: ":rspec:"  
     command: 
       - bundle config set --local with 'test'
-      - cd app && bundle install
+      - bundle install
       - rspec --color spec
     plugins:
       - docker#v5.9.0:
