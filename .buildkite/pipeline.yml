@@ -1,13 +1,12 @@
 
 steps:
-  - name: ":rspec:"
-    command: gem install rspec && rspec --init && ls -al app
+  - name: ":rspec:"  
+    command: 
+      - bundle config set --local with 'test'
+      - cd app && bundle install
+      - rspec --color spec
     plugins:
       - docker#v5.9.0:
           image: ruby:3.2
-          workdir: /app
-  - label: ":pipeline: upload"
-    command: "buildkite-agent pipeline upload .buildkite/pipeline2.yml"
-    env:
-      TARGET_ENV: "PROD"
+          workdir: /app 
   
