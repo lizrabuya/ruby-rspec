@@ -1,7 +1,5 @@
 steps:
-  - group: ":rocket: Release ${TARGET_ENV} services"
-    steps: 
-      - label: "${TARGET_ENV} services 1"
-        command: echo ${TARGET_ENV} 
-      - label: "${TARGET_ENV} services 2"
-        command: echo ${TARGET_ENV} 
+    - label: "${HOOK_ENV} services 1"
+      command: echo ${HOOK_ENV} 
+    - label: "${HOOK_ENV} services 2"
+      command: echo ${HOOK_ENV}  
