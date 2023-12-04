@@ -1,0 +1,5 @@
+#!/bin/bash
+ 
+set -e
+echo "+++ This is a repository hook (pre-command)"
+export HOOK_ENV="This is a hook env"
