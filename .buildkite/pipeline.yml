@@ -1,3 +1,6 @@
+notify:
+    - github_commit_status:
+        context: "my-custom-status"
 
 steps:
   - label: ":rspec:"  
@@ -14,4 +17,6 @@ steps:
       - docker#v5.9.0:
           image: ruby:3.2
           workdir: /app 
+
+
   
