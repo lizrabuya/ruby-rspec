@@ -1,3 +1,6 @@
+notify:
+    - github_commit_status:
+        context: "my-custom-status"
 
 steps:
   - label: ":rspec:"  
@@ -7,11 +10,13 @@ steps:
       - rspec --color spec
       - rubocop --auto-gen-config
     plugins:
-      - artifacts#v1.9.2:
-         upload: ".rubocop*.yml"
+      # - artifacts#v1.9.2:
+      #    upload: ".rubocop*.yml"
       - git-clean#v1.0.0:
           flags: "-fdqx"
       - docker#v5.9.0:
           image: ruby:3.2
           workdir: /app 
+
+
   
