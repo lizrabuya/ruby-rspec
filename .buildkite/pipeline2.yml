@@ -1,5 +1,0 @@
-steps:
-    - label: "${HOOK_ENV} services 1"
-      command: echo ${HOOK_ENV} 
-    - label: "${HOOK_ENV} services 2"
-      command: echo ${HOOK_ENV}  
